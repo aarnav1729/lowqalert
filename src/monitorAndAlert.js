@@ -1,8 +1,11 @@
 const fs = require('fs');
 const path = require('path');
+const express = require('express');
 const cron = require('node-cron');
 const { sendAlert } = require('./emailService');
 
+const app = express();
+const PORT = process.env.PORT || 3000;
 let lastProcessedLine = 0;
 
 function fetchDataFromFile(filePath) {
@@ -27,11 +30,11 @@ function calculateLowPercentage(data) {
 
 async function monitor() {
   const filePath = path.join(__dirname, '../data/panel_quality_data.txt');
-  const threshold = 10; // Set your threshold percentage
+  const threshold = 10; 
 
   const data = fetchDataFromFile(filePath);
   const newData = data.slice(lastProcessedLine);
-  lastProcessedLine = data.length; // Update last processed line index
+  lastProcessedLine = data.length; 
 
   if (newData.length > 0) {
     const lowPercentage = calculateLowPercentage(newData);
@@ -48,10 +51,13 @@ async function monitor() {
 }
 
 function scheduleMonitoring() {
-  cron.schedule('* * * * *', () => {  // Every minute
+  cron.schedule('* * * * *', () => {  
     console.log('Running monitoring task');
     monitor();
   });
 }
 
-scheduleMonitoring();
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+  scheduleMonitoring();  
+});
