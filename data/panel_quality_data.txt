@@ -58,3 +58,13 @@
 {"timestamp":"2024-08-03T06:57:51.804Z","grade":"medium"}
 {"timestamp":"2024-08-03T06:57:51.804Z","grade":"low"}
 {"timestamp":"2024-08-03T06:57:51.804Z","grade":"medium"}
+{"timestamp":"2024-08-03T09:02:07.378Z","grade":"high"}
+{"timestamp":"2024-08-03T09:02:07.397Z","grade":"high"}
+{"timestamp":"2024-08-03T09:02:07.397Z","grade":"low"}
+{"timestamp":"2024-08-03T09:02:07.397Z","grade":"high"}
+{"timestamp":"2024-08-03T09:02:07.397Z","grade":"low"}
+{"timestamp":"2024-08-03T09:02:07.397Z","grade":"medium"}
+{"timestamp":"2024-08-03T09:02:07.397Z","grade":"low"}
+{"timestamp":"2024-08-03T09:02:07.397Z","grade":"low"}
+{"timestamp":"2024-08-03T09:02:07.397Z","grade":"high"}
+{"timestamp":"2024-08-03T09:02:07.397Z","grade":"medium"}
